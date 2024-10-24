@@ -26,8 +26,11 @@ def short_lists(lists: list[list[int]]) -> list[list[int]]:
     Returns a new list containing only the elements of the input list
     that have a length of 2.
 
-    :param lists: A list of lists of integers.
-    :return: A list of lists, each having a length of 2.
+    Parameters:
+    lists (list[list[int]]): A list of lists of integers.
+
+    Returns:
+    list[list[int]: A list of lists, each having a length of 2.
     """
     return [lst for lst in lists if len(lst) == 2]
 
@@ -39,10 +42,10 @@ def ascending_pairs(input:list[list[int]]) -> list:
     Sublists of other lengths remain unchanged.
 
     Parameters:
-    input (List[List[int]]): A list of lists of integers.
+    input (list[list[int]]): A list of lists of integers.
 
     Returns:
-    sublist[List[int]]: A new list where sublists of length 2 are sorted in ascending order.
+    list: A new list where sublists of length 2 are sorted in ascending order.
     """
     sublist = []
     for i in input:
@@ -69,9 +72,12 @@ def add_prices(price1: Price, price2: Price) -> Price:
     Adds two Price objects and returns a new Price object.
     Ensures that the total cents are not above 99.
 
-    :param price1: The first Price object.
-    :param price2: The second Price object.
-    :return: A new Price object representing the sum.
+    Parameters:
+    price1 (Price): The first Price object.
+    price2 (Price): The second Price object.
+
+    Returns:
+    Price: A new Price object representing the sum.
     """
     total_cents = price1.cents + price2.cents
     total_dollars = price1.dollars + price2.dollars + (total_cents // 100)  # Carry over dollars
@@ -145,10 +151,10 @@ def circle_bound(rect: Rectangle) -> Circle:
     the smallest bounding circle for the rectangle.
 
     Parameters:
-        rect (Rectangle): The input Rectangle object.
+    rect (Rectangle): The input Rectangle object.
 
     Returns:
-        Circle: A Circle object representing the bounding circle of the rectangle.
+    Circle: A Circle object representing the bounding circle of the rectangle.
     """
     center_x = (rect.top_left.x + rect.bottom_right.x) / 2
     center_y = (rect.top_left.y + rect.bottom_right.y) / 2
@@ -164,13 +170,15 @@ class Employee:
         self.name = name
         self.pay = pay
 
-
 def below_pay_average(employees: list) -> list[str]:
     """
     Returns a list of names of employees who earn less than the average pay.
 
-    :param employees: A list of Employee objects.
-    :return: A list of names of employees below the average pay.
+    Parameters:
+    employees (list): A list of Employee objects.
+
+    Returns:
+    list[str]: A list of names of employees below the average pay.
     """
     if not employees:
         return []
